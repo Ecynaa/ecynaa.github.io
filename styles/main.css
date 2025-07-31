@@ -99,7 +99,7 @@ header nav ul li a, header nav ul button {
   transition: color 0.5s ease;
   text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
 }
-header nav ul:hover {
+header nav ul li a:hover, header nav ul button:hover {
   color: var(--secondary-color);
 }
 header nav button#theme-toggle {

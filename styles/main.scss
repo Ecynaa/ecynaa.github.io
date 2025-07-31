@@ -94,11 +94,11 @@ header {
                 font-weight: bold;
                 transition: color 0.5s ease;
                 text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
-                }
                 &:hover {
                     color: var(--secondary-color);
                 }
             }
+        }
             & button#theme-toggle {
                 width: $circle-size;
                 height: $circle-size;

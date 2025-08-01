@@ -14,16 +14,16 @@ function typeEffect() {
 
   if (!isDeleting && charIndex < currentWord.length) {
     charIndex++;
-    setTimeout(typeEffect, 100);
+    setTimeout(typeEffect, 150);
   } else if (isDeleting && charIndex > 0) {
     charIndex--;
-    setTimeout(typeEffect, 50);
+    setTimeout(typeEffect, 75);
   } else {
     isDeleting = !isDeleting;
     if (!isDeleting) {
       wordIndex = (wordIndex + 1) % words.length;
     }
-    setTimeout(typeEffect, 1500);
+    setTimeout(typeEffect, 1000);
   }
 }
 

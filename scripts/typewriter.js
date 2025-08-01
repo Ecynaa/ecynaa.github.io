@@ -23,7 +23,7 @@ function typeEffect() {
     if (!isDeleting) {
       wordIndex = (wordIndex + 1) % words.length;
     }
-    setTimeout(typeEffect, 1000);
+    setTimeout(typeEffect, 1500);
   }
 }
 

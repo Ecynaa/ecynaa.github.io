@@ -144,7 +144,7 @@ header nav button#theme-toggle.pulse {
 header .typewriter h1 {
   position: absolute;
   top: 50%;
-  left: 50%;
+  left: 30%;
   transform: translate(-50%, -50%);
   color: var(--text-color);
   text-align: center;

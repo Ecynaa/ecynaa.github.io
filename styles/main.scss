@@ -155,12 +155,15 @@ header {
             white-space: nowrap;
             overflow: hidden;
             font-size: 3rem;
+            font-family: 'Quintessential', sans-serif;
         }
         & .cursor {
             font-size: 3rem;
             display: inline-block;
             width: 1ch;
             animation: blink 0.7s infinite;
+            font-family: 'Quintessential', sans-serif;
+
         }
     }
 }

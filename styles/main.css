@@ -160,12 +160,14 @@ header .typewriter h1 #typed-text {
   white-space: nowrap;
   overflow: hidden;
   font-size: 3rem;
+  font-family: "Quintessential", sans-serif;
 }
 header .typewriter h1 .cursor {
   font-size: 3rem;
   display: inline-block;
   width: 1ch;
   animation: blink 0.7s infinite;
+  font-family: "Quintessential", sans-serif;
 }
 
 body {

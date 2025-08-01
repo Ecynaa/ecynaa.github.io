@@ -49,6 +49,26 @@ html {
   }
 }
 
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1s ease-out forwards;
+  animation-delay: 0.5s; // Facultatif : délai avant le début
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 0; }
+  50% { opacity: 1; }
+}
+
 header {
     position: relative; 
     height: 100vh;
@@ -117,7 +137,7 @@ header {
                 }
             }
     }
-    & h1 {
+    & .typewriter h1 {
         position: absolute;
         top: 50%;
         left: 50%;
@@ -125,11 +145,23 @@ header {
         color: var(--text-color);
         text-align: center;
         z-index: 2;
-        font-size: 3rem;
+        font-size: 2.5rem;
         font-weight: 700;
         margin: 0;
         text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
         transition: color 0.5s ease;
+        & #typed-text {
+            letter-spacing: 0.1em;
+            white-space: nowrap;
+            overflow: hidden;
+            font-size: 3rem;
+        }
+        & .cursor {
+            font-size: 3rem;
+            display: inline-block;
+            width: 1ch;
+            animation: blink 0.7s infinite;
+        }
     }
 }
 
@@ -138,3 +170,4 @@ body {
   color: var(--text-color);
   transition: background-color 0.5s ease, color 0.5s ease;
 }
+

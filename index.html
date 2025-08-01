@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/scss-reset/reset.css"> <!-- Reset CSS pour une base propre -->
     <link rel="stylesheet" href="styles/main.css">                        <!-- Lien vers le fichier CSS principal -->
 </head>
@@ -21,7 +22,9 @@
                 <li><button id="theme-toggle" aria-label="Changer de thème" title="Changer de thème"></button></li>
             </ul>
         </nav>
-        <h1>Bienvenue sur Ecyna's Folio</h1>
+        <div class="typewriter">
+            <h1 id="main-fade-in">Je suis</br><span id="typed-text"></span><span class="cursor">/</span></h1>
+        </div>
     </header>
     <main>
         <section>
@@ -34,5 +37,7 @@
     </footer>
     <script src='scripts/nav_scroll.js'></script>
     <script src='scripts/theme-toggle.js'></script>
+    <script src='scripts/main-fade-in.js'></script>
+    <script src='scripts/typewriter.js'></script>
 </body>
 </html>

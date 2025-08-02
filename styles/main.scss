@@ -52,7 +52,7 @@ html {
 @keyframes fadeIn {
   from {
     opacity: 0;
-    transform: scale(0.75) translate(-50%, -50%);
+    transform: scale(0.8) translate(-50%, -50%);
     visibility: hidden;
   }
   to {
@@ -141,33 +141,35 @@ header {
                 }
             }
     }
-    & .typewriter h1 {
-        position: absolute;
-        top: 50%;
-        left: 30%;
-        transform: translate(-30%, -50%);
-        color: var(--text-color);
-        text-align: center;
-        z-index: 2;
-        font-size: 2.5rem;
-        font-weight: 700;
-        margin: 0;
-        text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
-        transition: color 0.5s ease;
-        & #typed-text {
-            letter-spacing: 0.1em;
-            white-space: nowrap;
-            overflow: hidden;
-            font-size: 3rem;
-            font-family: 'Quintessential', sans-serif;
-        }
-        & .cursor {
-            font-size: 3rem;
-            display: inline-block;
-            width: 1ch;
-            animation: blink 0.7s infinite;
-            font-family: 'Quintessential', sans-serif;
+    & .content_header {
+        & .typewriter h1 {
+            position: absolute;
+            top: 50%;
+            left: 30%;
+            transform: translate(-30%, -50%);
+            color: var(--text-color);
+            text-align: center;
+            z-index: 2;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin: 0;
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+            transition: color 0.5s ease;
+            & #typed-text {
+                letter-spacing: 0.1em;
+                white-space: nowrap;
+                overflow: hidden;
+                font-size: 3rem;
+                font-family: 'Quintessential', sans-serif;
+            }
+            & .cursor {
+                font-size: 3rem;
+                display: inline-block;
+                width: 1ch;
+                animation: blink 0.7s infinite;
+                font-family: 'Quintessential', sans-serif;
 
+            }
         }
     }
 }

@@ -49,7 +49,7 @@ html {
 @keyframes fadeIn {
   from {
     opacity: 0;
-    transform: scale(0.75) translate(-50%, -50%);
+    transform: scale(0.8) translate(-50%, -50%);
     visibility: hidden;
   }
   to {
@@ -145,7 +145,7 @@ header nav button#theme-toggle:hover {
 header nav button#theme-toggle.pulse {
   animation: pulse 0.6s ease;
 }
-header .typewriter h1 {
+header .content_header .typewriter h1 {
   position: absolute;
   top: 50%;
   left: 30%;
@@ -159,14 +159,14 @@ header .typewriter h1 {
   text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
   transition: color 0.5s ease;
 }
-header .typewriter h1 #typed-text {
+header .content_header .typewriter h1 #typed-text {
   letter-spacing: 0.1em;
   white-space: nowrap;
   overflow: hidden;
   font-size: 3rem;
   font-family: "Quintessential", sans-serif;
 }
-header .typewriter h1 .cursor {
+header .content_header .typewriter h1 .cursor {
   font-size: 3rem;
   display: inline-block;
   width: 1ch;

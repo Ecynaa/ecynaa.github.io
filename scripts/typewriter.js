@@ -1,6 +1,6 @@
 const words = ['/Développeuse', '/Curieuse', '/Créative', '/Passionnée'];
 const typedText = document.getElementById('typed-text');
-const cursor = document.querySelector('.cursor');
+const cursor_typewriter = document.querySelector('.cursor');
 
 let wordIndex = 0;
 let charIndex = 0;

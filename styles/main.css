@@ -204,7 +204,7 @@ header .content_header .img_dev {
   width: 20%;
   height: auto;
   aspect-ratio: 9/16;
-  z-index: 2;
+  z-index: 1;
   border-radius: 25px;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
   rotate: 5deg;

@@ -26,14 +26,6 @@ html[data-theme="dark"] {              // Modifier Couleurs
     --circle-color: #eee; 
 }
 
-html {
-    font-family: var(--font-family);
-    font-size: var(--font-size);
-    user-select: none;
-                                        //cursor: none; Ajouter un curseur personnalisé plus tard
-    scrollbar-width: none;
-}
-
 @keyframes pulse {
   0% {
     transform: scale(1);
@@ -92,10 +84,20 @@ html {
   50% { opacity: 1; }
 }
 
-header {
-    position: relative; 
-    height: 100vh;
-    & .bg_image {
+html {
+  font-family: var(--font-family);
+  font-size: var(--font-size);
+  user-select: none;
+  //cursor: none;
+  scrollbar-width: none;
+  & body {
+    background-color: var(--background);
+    color: var(--text-color);
+    transition: background-color 0.5s ease, color 0.5s ease;
+    & header {
+      position: relative; 
+      height: 100vh;
+      & .bg_image {
         background: url('../images/domenico-loia-hGV2TfOh0ns-unsplash.jpg') no-repeat center center;
         background-attachment: fixed;
         background-size: cover;
@@ -106,8 +108,8 @@ header {
         left: 0;
         z-index: 0;
         filter: blur(3px);
-    }
-    & nav {
+      }
+      & nav {
         position: fixed;
         top: 0;
         right: 0;
@@ -122,97 +124,96 @@ header {
         -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 90%);
         mask-image: linear-gradient(to bottom, black 80%, transparent 90%);
         &.scrolled {
-            backdrop-filter: blur(10px);
-            background-color: var(--nav-background-scrolled);
+          backdrop-filter: blur(10px);
+          background-color: var(--nav-background-scrolled);
         }
         & ul {
-            list-style: none;
-            display: flex;
-            gap: 20px;
-            margin: 0;
-            padding: 0;
-            & li a , & button {
-                color: var(--text-color);
-                text-decoration: none;
-                font-weight: bold;
-                transition: color 0.5s ease;
-                text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
-                &:hover {
-                    color: var(--secondary-color);
-                }
+          list-style: none;
+          display: flex;
+          gap: 20px;
+          margin: 0;
+          padding: 0;
+          & li a , & button {
+            color: var(--text-color);
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.5s ease;
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+            &:hover {
+              color: var(--secondary-color);
             }
+          }
         }
-            & button#theme-toggle {
-                width: $circle-size;
-                height: $circle-size;
-                border-radius: 50%;
-                border: 2px solid var(--circle-color);
-                background-color: var(--circle-color);
-                cursor: pointer;
-                transition: background-color 0.5s ease, border-color 0.5s ease, transform 0.3s ease;
-                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
-                &:hover {
-                    transform: scale(1.2);
-                    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-                }
-                &.pulse {
-                    animation: pulse 0.6s ease;
-                }
-            }
-    }
-    & .content_header {
+        & button#theme-toggle {
+          width: $circle-size;
+          height: $circle-size;
+          border-radius: 50%;
+          border: 2px solid var(--circle-color);
+          background-color: var(--circle-color);
+          cursor: pointer;
+          transition: background-color 0.5s ease, border-color 0.5s ease, transform 0.3s ease;
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+          &:hover {
+            transform: scale(1.2);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+          }
+          &.pulse {
+            animation: pulse 0.6s ease;
+          }
+        }
+      }
+      & .content_header {
         display: flex;
         align-items: center;
         justify-content: space-around;
         width: 100%;
         height: 100vh;
-        
         & .typewriter h1 {
-            position: absolute;
-            top: 50%;
-            left: 30%;
-            transform: translate(-50%, -50%);
-            color: var(--text-color);
-            text-align: center;
-            z-index: 2;
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin: 0;
-            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
-            transition: color 0.5s ease;
-            & #typed-text {
-                letter-spacing: 0.1em;
-                white-space: nowrap;
-                overflow: hidden;
-                font-size: 3rem;
-                font-family: 'Quintessential', sans-serif;
-            }
-            & .cursor {
-                font-size: 3rem;
-                display: inline-block;
-                width: 1ch;
-                animation: blink 0.7s infinite;
-                font-family: 'Quintessential', sans-serif;
-
-            }
+          position: absolute;
+          top: 50%;
+          left: 30%;
+          transform: translate(-50%, -50%);
+          color: var(--text-color);
+          text-align: center;
+          z-index: 2;
+          font-size: 2.5rem;
+          font-weight: 700;
+          margin: 0;
+          text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+          transition: color 0.5s ease;
+          & #typed-text {
+            letter-spacing: 0.1em;
+            white-space: nowrap;
+            overflow: hidden;
+            font-size: 3rem;
+            font-family: 'Quintessential', sans-serif;
+          }
+          & .cursor {
+            font-size: 3rem;
+            display: inline-block;
+            width: 1ch;
+            animation: blink 0.7s infinite;
+            font-family: 'Quintessential', sans-serif;
+          }
         }
         & .img_dev {
-            background: url('../images/test.jpg') no-repeat center center;
-            background-size: cover;
-            width: 20%;
-            height: auto;
-            aspect-ratio: 9/16;
-            z-index: 2;
-            border-radius: 25px;
-            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-            rotate: 5deg;
+          background: url('../images/test.jpg') no-repeat center center;
+          background-size: cover;
+          width: 20%;
+          height: auto;
+          aspect-ratio: 9/16;
+          z-index: 1;
+          border-radius: 25px;
+          box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+          rotate: 5deg;
         }
+      }
     }
-}
+    &main {
+      
+    }
+    & footer {
 
-body {
-  background-color: var(--background);
-  color: var(--text-color);
-  transition: background-color 0.5s ease, color 0.5s ease;
+    }
+  }
 }
-

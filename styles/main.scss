@@ -209,11 +209,11 @@ html {
         }
       }
     }
-    &main {
-      
+    & main {
+      color: var(--text-color);
     }
     & footer {
-
+      color: var(--text-color);
     }
   }
 }

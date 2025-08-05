@@ -88,12 +88,54 @@ html {
   font-family: var(--font-family);
   font-size: var(--font-size);
   user-select: none;
-  //cursor: none;
+  cursor: none;
   scrollbar-width: none;
   & body {
     background-color: var(--background);
     color: var(--text-color);
     transition: background-color 0.5s ease, color 0.5s ease;
+    
+    .custom-cursor {
+      pointer-events: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 9999;
+      & .cursor-dot,
+        .cursor-outline,
+        .cursor-bg {
+          position: absolute;
+          border-radius: 50%;
+          transform: translate(-50%, -50%);
+          transition: transform 0.15s ease, opacity 0.3s ease;
+      }
+      & .cursor-dot {
+        width: 6px;
+        height: 6px;
+        background-color: var(--text-color);
+        z-index: 3;
+      }
+      & .cursor-outline {
+        width: 30px;
+        height: 30px;
+        border: 2px solid var(--text-color);
+        z-index: 2;
+      }
+      & .cursor-bg {
+        width: 0;
+        height: 0;
+        background-color: var(--text-color);
+        opacity: 0;
+        z-index: 1;
+        transition: width 0.4s ease, height 0.4s ease, opacity 0.4s ease;
+      }
+      & a:hover ~ .custom-cursor .cursor-bg,
+        button:hover ~ .custom-cursor .cursor-bg {
+        width: 15px;
+        height: 15px;
+        opacity: 0.1;
+      }
+    }
     & header {
       position: relative; 
       height: 100vh;

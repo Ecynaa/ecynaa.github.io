@@ -31,8 +31,8 @@ const dot = document.querySelector('.cursor-dot');
   });
 
   document.addEventListener('mousedown', () => {
-    bg.style.width = '30px'; // correspond à la taille du cercle
-    bg.style.height = '30px';
+    bg.style.width = '4vh'; // correspond à la taille du cercle
+    bg.style.height = '4vh';
     bg.style.opacity = '0.5';
   });
 
@@ -44,8 +44,8 @@ const dot = document.querySelector('.cursor-dot');
 
   document.querySelectorAll('a, button').forEach(el => {
     el.addEventListener('mouseenter', () => {
-      bg.style.width = '15px';
-      bg.style.height = '15px';
+      bg.style.width = '2vh';
+      bg.style.height = '2vh';
       bg.style.opacity = '0.5';
     });
 

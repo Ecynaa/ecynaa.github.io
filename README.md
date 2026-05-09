@@ -1,2 +1,2 @@
-# ecynaa.github.io
+# ecyna.github.io
 

@@ -37,7 +37,7 @@ nav {
   justify-content: space-between;
   background: rgba(4, 4, 14, 0.82);
   backdrop-filter: blur(20px);
-  border-bottom: 1px solid var(--border-v);
+  border-bottom: 1px solid rgba(147, 51, 234, 0.35);
 }
 nav .nav-logo {
   font-family: "Bebas Neue", sans-serif;
